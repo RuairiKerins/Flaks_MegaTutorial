@@ -1,4 +1,4 @@
-# Flaks_MegaTutorial
+# Flask_MegaTutorial
 An in depth tutorial of how to use flask, the topics covered are as follows:  
 Chapter 1: Hello, World!  
 Chapter 2: Templates  
