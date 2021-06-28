@@ -1,4 +1,16 @@
-2021-06-28 16:17:37,932 ERROR: Exception on /user/Rarf [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
+2021-06-24 12:34:05,591 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
+2021-06-24 13:00:37,369 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
+2021-06-24 13:01:04,469 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
+2021-06-24 13:01:36,018 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
+2021-06-24 15:52:00,564 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
+2021-06-24 15:52:09,475 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
+2021-06-24 15:52:28,736 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
+2021-06-24 15:53:10,274 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
+2021-06-24 15:54:10,477 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
+2021-06-24 15:54:38,259 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
+2021-06-24 15:55:59,311 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
+2021-06-24 16:33:48,763 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
+2021-06-24 16:35:36,890 ERROR: Exception on /user/susan [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
 Traceback (most recent call last):
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
@@ -10,8 +22,8 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 79, in user
-    return render_template("user.jinja", user=user, posts=posts, form=form)
+  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 73, in user
+    return render_template("user.jinja", user=user, posts=posts)
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
     return _render(
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
@@ -22,13 +34,14 @@ Traceback (most recent call last):
     raise rewrite_traceback_stack(source=source)
   File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 1, in top-level template code
     {% extends "base.jinja" %}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 29, in top-level template code
     {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 33, in block 'content'
-    {% for post in posts %}
-TypeError: 'Pagination' object is not iterable
-2021-06-28 16:20:51,802 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
-2021-06-28 16:20:55,700 ERROR: Exception on /user/Rarf [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 17, in block 'content'
+    {{form.hidden_tag() }}
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2021-06-24 16:37:08,355 ERROR: Exception on /user/Rarf [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
 Traceback (most recent call last):
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
@@ -40,8 +53,8 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 79, in user
-    return render_template("user.jinja", user=user, posts=posts, form=form)
+  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 73, in user
+    return render_template("user.jinja", user=user, posts=posts)
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
     return _render(
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
@@ -52,13 +65,14 @@ Traceback (most recent call last):
     raise rewrite_traceback_stack(source=source)
   File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 1, in top-level template code
     {% extends "base.jinja" %}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 29, in top-level template code
     {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 33, in block 'content'
-    {% for post in posts %}
-TypeError: 'Pagination' object is not iterable
-2021-06-28 16:26:54,491 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
-2021-06-28 16:27:03,662 ERROR: Exception on /user/Rarf [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 17, in block 'content'
+    {{form.hidden_tag() }}
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2021-06-24 16:38:33,789 ERROR: Exception on /user/susan [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
 Traceback (most recent call last):
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
@@ -70,8 +84,8 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 79, in user
-    return render_template("user.jinja", user=user, posts=posts, form=form)
+  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 73, in user
+    return render_template("user.jinja", user=user, posts=posts)
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
     return _render(
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
@@ -82,39 +96,10 @@ Traceback (most recent call last):
     raise rewrite_traceback_stack(source=source)
   File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 1, in top-level template code
     {% extends "base.jinja" %}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 29, in top-level template code
     {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 33, in block 'content'
-    {% for post in posts %}
-TypeError: 'Pagination' object is not iterable
-2021-06-28 16:33:02,229 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
-2021-06-28 16:33:06,117 ERROR: Exception on /user/Rarf [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
-Traceback (most recent call last):
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 83, in user
-    return render_template("user.jinja", user=user, posts=posts, form=form)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
-    return _render(
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
-    self.environment.handle_exception()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 1, in top-level template code
-    {% extends "base.jinja" %}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
-    {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 33, in block 'content'
-    {% for post in posts %}
-TypeError: 'Pagination' object is not iterable
-2021-06-28 16:35:48,903 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 17, in block 'content'
+    {{form.hidden_tag() }}
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
