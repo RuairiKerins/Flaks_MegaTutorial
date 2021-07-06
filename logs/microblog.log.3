@@ -1,4 +1,4 @@
-2021-06-28 16:17:37,932 ERROR: Exception on /user/Rarf [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
+2021-07-01 14:22:20,548 ERROR: Exception on /reset_password_request [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
 Traceback (most recent call last):
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
@@ -8,10 +8,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 79, in user
-    return render_template("user.jinja", user=user, posts=posts, form=form)
+  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 186, in reset_password_request
+    return render_template("reset_password_request.jinja",
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
     return _render(
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
@@ -20,15 +18,21 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 1, in top-level template code
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 1, in top-level template code
     {% extends "base.jinja" %}
   File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
     {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 33, in block 'content'
-    {% for post in posts %}
-TypeError: 'Pagination' object is not iterable
-2021-06-28 16:20:51,802 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
-2021-06-28 16:20:55,700 ERROR: Exception on /user/Rarf [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 15, in block 'content'
+    {{ form.password.label }}<br>
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordRequestForm object' has no attribute 'password'
+2021-07-01 14:54:23,074 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
+2021-07-01 14:58:56,717 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
+2021-07-01 15:02:59,225 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
+2021-07-01 15:09:49,278 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
+2021-07-01 15:18:28,914 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
+2021-07-01 15:26:53,845 ERROR: Exception on /reset_passowrd/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6NiwiZXhwIjoxNjI1MTQ5NzE3LjE5ODUwNzN9.TOWuhM67yew5RIzbFCZNA-Jpijw6aba8l-M8zCGxtLc [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
 Traceback (most recent call last):
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
@@ -38,27 +42,24 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 79, in user
-    return render_template("user.jinja", user=user, posts=posts, form=form)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
-    return _render(
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
-    self.environment.handle_exception()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 1, in top-level template code
-    {% extends "base.jinja" %}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
-    {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 33, in block 'content'
-    {% for post in posts %}
-TypeError: 'Pagination' object is not iterable
-2021-06-28 16:26:54,491 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
-2021-06-28 16:27:03,662 ERROR: Exception on /user/Rarf [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
+  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 80, in reset_password
+    form = ResetPasswordForm()
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_wtf/form.py", line 87, in __init__
+    super().__init__(formdata=formdata, **kwargs)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/form.py", line 268, in __init__
+    super(Form, self).__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/form.py", line 51, in __init__
+    field = meta.bind_field(self, unbound_field, options)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/meta.py", line 27, in bind_field
+    return unbound_field.bind(form=form, **options)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/fields/core.py", line 376, in bind
+    return self.field_class(*self.args, **kw)
+TypeError: __init__() got an unexpected keyword argument 'validator'
+2021-07-01 15:34:38,499 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
+2021-07-01 15:35:13,244 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
+2021-07-01 15:35:26,348 ERROR: Exception on /reset_passowrd/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6NiwiZXhwIjoxNjI1MTUwNzE5Ljc0ODE5MDl9.v0w7q-ISAUbD2G12prg6zq49NkjMqkNeyi0GMyFmlD4 [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
 Traceback (most recent call last):
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
@@ -68,27 +69,22 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 79, in user
-    return render_template("user.jinja", user=user, posts=posts, form=form)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
-    return _render(
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
-    self.environment.handle_exception()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 1, in top-level template code
-    {% extends "base.jinja" %}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
-    {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 33, in block 'content'
-    {% for post in posts %}
-TypeError: 'Pagination' object is not iterable
-2021-06-28 16:33:02,229 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
-2021-06-28 16:33:06,117 ERROR: Exception on /user/Rarf [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
+  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 94, in reset_password
+    form = ResetPasswordForm()
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_wtf/form.py", line 87, in __init__
+    super().__init__(formdata=formdata, **kwargs)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/form.py", line 268, in __init__
+    super(Form, self).__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/form.py", line 51, in __init__
+    field = meta.bind_field(self, unbound_field, options)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/meta.py", line 27, in bind_field
+    return unbound_field.bind(form=form, **options)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/fields/core.py", line 376, in bind
+    return self.field_class(*self.args, **kw)
+TypeError: __init__() got an unexpected keyword argument 'validator'
+2021-07-01 15:35:33,499 ERROR: Exception on /reset_passowrd/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6NiwiZXhwIjoxNjI1MTUwNzE5Ljc0ODE5MDl9.v0w7q-ISAUbD2G12prg6zq49NkjMqkNeyi0GMyFmlD4 [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
 Traceback (most recent call last):
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
@@ -98,28 +94,19 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 83, in user
-    return render_template("user.jinja", user=user, posts=posts, form=form)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
-    return _render(
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
-    self.environment.handle_exception()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 1, in top-level template code
-    {% extends "base.jinja" %}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
-    {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 33, in block 'content'
-    {% for post in posts %}
-TypeError: 'Pagination' object is not iterable
-2021-06-28 16:35:48,903 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
-2021-06-28 16:52:03,910 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
-2021-06-28 17:34:49,803 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
-2021-06-28 17:38:06,420 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
-2021-06-28 17:45:41,450 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
-2021-06-28 20:51:34,131 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
+  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 94, in reset_password
+    form = ResetPasswordForm()
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_wtf/form.py", line 87, in __init__
+    super().__init__(formdata=formdata, **kwargs)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/form.py", line 268, in __init__
+    super(Form, self).__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/form.py", line 51, in __init__
+    field = meta.bind_field(self, unbound_field, options)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/meta.py", line 27, in bind_field
+    return unbound_field.bind(form=form, **options)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/fields/core.py", line 376, in bind
+    return self.field_class(*self.args, **kw)
+TypeError: __init__() got an unexpected keyword argument 'validator'
+2021-07-01 15:38:32,953 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]

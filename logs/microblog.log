@@ -1,4 +1,4 @@
-2021-07-01 15:38:46,306 ERROR: Exception on /reset_passowrd/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6NiwiZXhwIjoxNjI1MTUwOTIwLjEzNzg4NDR9.KvTAXf_EOUasHTgejdsJHnzSPsYhyNAP2HLODqw8HlY [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
+2021-07-02 12:44:30,223 ERROR: Exception on / [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
 Traceback (most recent call last):
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
@@ -8,8 +8,10 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 100, in reset_password
-    return render_template("reset_password.jinja", form=form)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 30, in index
+    return render_template("index.jinja", title="Home", form=form,
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
     return _render(
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
@@ -18,13 +20,48 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password.jinja", line 1, in top-level template code
-    {% extends "base.jinja" %}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
-    {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password.jinja", line 21, in block 'content'
-    <p>{{ for.submit() }}</p>
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'for' is undefined
-2021-07-01 15:40:10,202 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/index.jinja", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 1, in top-level template code
+    {% extends "bootstrap/base.html" %}
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 48, in block 'content'
+    {% block app_content %}{% endblock%}
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/index.jinja", line 11, in block 'app_content'
+    {% include "_post.jinja"%}
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/_post.jinja", line 10, in template
+    {{ post.author.username) }}
+jinja2.exceptions.TemplateSyntaxError: unexpected ')'
+2021-07-02 12:44:48,939 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
+2021-07-02 12:47:10,111 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
+2021-07-02 12:53:29,672 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
+2021-07-02 12:54:01,306 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
+2021-07-02 12:57:15,163 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
+2021-07-02 12:58:16,156 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
+2021-07-02 12:58:39,361 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
+2021-07-02 12:59:14,151 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
+2021-07-02 13:36:21,383 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
+2021-07-02 13:37:06,537 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
+2021-07-02 13:37:24,579 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
+2021-07-02 13:37:38,411 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
+2021-07-02 13:38:06,310 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
+2021-07-02 13:38:25,780 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
+2021-07-02 14:19:58,043 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
+2021-07-02 14:48:02,199 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
+2021-07-02 14:48:54,560 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
+2021-07-02 14:51:17,472 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
+2021-07-02 14:52:09,975 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
+2021-07-02 15:24:33,355 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
+2021-07-02 15:27:14,571 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
+2021-07-02 15:28:42,577 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
+2021-07-06 12:50:27,083 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:53]
+2021-07-06 12:51:32,324 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:53]
