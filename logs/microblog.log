@@ -1,67 +1,76 @@
-2021-07-02 12:44:30,223 ERROR: Exception on / [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
+2021-07-09 16:37:53,786 ERROR: Exception on / [GET] [in /home/ruairi/.local/lib/python3.8/site-packages/flask/app.py:1454]
 Traceback (most recent call last):
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+  File "/home/ruairi/.local/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+  File "/home/ruairi/.local/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+  File "/home/ruairi/.local/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+  File "/home/ruairi/.local/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+  File "/usr/local/lib/python3.8/dist-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 30, in index
+  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 37, in index
     return render_template("index.jinja", title="Home", form=form,
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
-    return _render(
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
-    self.environment.handle_exception()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/index.jinja", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 1, in top-level template code
-    {% extends "bootstrap/base.html" %}
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
-    {% block content -%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 48, in block 'content'
-    {% block app_content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/index.jinja", line 11, in block 'app_content'
-    {% include "_post.jinja"%}
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/_post.jinja", line 10, in template
-    {{ post.author.username) }}
-jinja2.exceptions.TemplateSyntaxError: unexpected ')'
-2021-07-02 12:44:48,939 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
-2021-07-02 12:47:10,111 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
-2021-07-02 12:53:29,672 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
-2021-07-02 12:54:01,306 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
-2021-07-02 12:57:15,163 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
-2021-07-02 12:58:16,156 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
-2021-07-02 12:58:39,361 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
-2021-07-02 12:59:14,151 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
-2021-07-02 13:36:21,383 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
-2021-07-02 13:37:06,537 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
-2021-07-02 13:37:24,579 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
-2021-07-02 13:37:38,411 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
-2021-07-02 13:38:06,310 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
-2021-07-02 13:38:25,780 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
-2021-07-02 14:19:58,043 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
-2021-07-02 14:48:02,199 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
-2021-07-02 14:48:54,560 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
-2021-07-02 14:51:17,472 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
-2021-07-02 14:52:09,975 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
-2021-07-02 15:24:33,355 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
-2021-07-02 15:27:14,571 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
-2021-07-02 15:28:42,577 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:52]
-2021-07-06 12:50:27,083 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:53]
-2021-07-06 12:51:32,324 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:53]
+  File "/home/ruairi/.local/lib/python3.8/site-packages/flask/templating.py", line 148, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ruairi/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1068, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ruairi/.local/lib/python3.8/site-packages/jinja2/environment.py", line 997, in get_template
+    return self._load_template(name, globals)
+  File "/home/ruairi/.local/lib/python3.8/site-packages/jinja2/environment.py", line 958, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/ruairi/.local/lib/python3.8/site-packages/jinja2/loaders.py", line 125, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ruairi/.local/lib/python3.8/site-packages/flask/templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ruairi/.local/lib/python3.8/site-packages/flask/templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.jinja
+2021-07-09 16:39:39,984 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-09 16:39:41,820 ERROR: Exception on / [GET] [in /home/ruairi/.local/lib/python3.8/site-packages/flask/app.py:1454]
+Traceback (most recent call last):
+  File "/home/ruairi/.local/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ruairi/.local/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ruairi/.local/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ruairi/.local/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.8/dist-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 37, in index
+    return render_template("index.jinja", title="Home", form=form,
+  File "/home/ruairi/.local/lib/python3.8/site-packages/flask/templating.py", line 148, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/ruairi/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1068, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/ruairi/.local/lib/python3.8/site-packages/jinja2/environment.py", line 997, in get_template
+    return self._load_template(name, globals)
+  File "/home/ruairi/.local/lib/python3.8/site-packages/jinja2/environment.py", line 958, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/ruairi/.local/lib/python3.8/site-packages/jinja2/loaders.py", line 125, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/ruairi/.local/lib/python3.8/site-packages/flask/templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/ruairi/.local/lib/python3.8/site-packages/flask/templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.jinja
+2021-07-09 16:40:23,074 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-09 16:55:44,889 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-09 16:56:28,845 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-09 16:56:45,984 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-09 17:02:44,575 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-09 17:03:22,334 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-09 19:36:02,565 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-09 19:37:30,789 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-09 19:47:29,426 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-09 19:49:58,596 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-09 19:50:53,565 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-09 20:01:05,820 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-09 20:01:13,905 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-13 09:43:06,146 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-13 09:59:36,691 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-13 10:45:44,492 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-13 10:46:18,974 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
