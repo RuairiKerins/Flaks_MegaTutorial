@@ -1,34 +1,4 @@
-2021-06-28 20:51:51,898 ERROR: Exception on /reset_password_request [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
-Traceback (most recent call last):
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 170, in reset_password_request
-    return render_template("reset_password_request.jinja",
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
-    return _render(
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
-    self.environment.handle_exception()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 1, in top-level template code
-    {% extends "base.jinja" %}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
-    {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 14, in block 'content'
-    <p>{{ for.submit() }}</p>
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'for' is undefined
-2021-06-28 22:41:10,659 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
-2021-06-28 22:41:15,846 ERROR: Exception on /reset_password_request [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
+2021-07-01 14:22:20,548 ERROR: Exception on /reset_password_request [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
 Traceback (most recent call last):
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
@@ -57,8 +27,12 @@ Traceback (most recent call last):
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 474, in getattr
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordRequestForm object' has no attribute 'password'
-2021-07-01 14:05:17,930 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
-2021-07-01 14:05:26,574 ERROR: Exception on /reset_password_request [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
+2021-07-01 14:54:23,074 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
+2021-07-01 14:58:56,717 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
+2021-07-01 15:02:59,225 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
+2021-07-01 15:09:49,278 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
+2021-07-01 15:18:28,914 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
+2021-07-01 15:26:53,845 ERROR: Exception on /reset_passowrd/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6NiwiZXhwIjoxNjI1MTQ5NzE3LjE5ODUwNzN9.TOWuhM67yew5RIzbFCZNA-Jpijw6aba8l-M8zCGxtLc [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
 Traceback (most recent call last):
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
@@ -68,27 +42,24 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 186, in reset_password_request
-    return render_template("reset_password_request.jinja",
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
-    return _render(
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
-    self.environment.handle_exception()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 1, in top-level template code
-    {% extends "base.jinja" %}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
-    {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 15, in block 'content'
-    {{ form.password.label }}<br>
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordRequestForm object' has no attribute 'password'
-2021-07-01 14:15:25,789 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
-2021-07-01 14:15:29,982 ERROR: Exception on /reset_password_request [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
+  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 80, in reset_password
+    form = ResetPasswordForm()
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_wtf/form.py", line 87, in __init__
+    super().__init__(formdata=formdata, **kwargs)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/form.py", line 268, in __init__
+    super(Form, self).__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/form.py", line 51, in __init__
+    field = meta.bind_field(self, unbound_field, options)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/meta.py", line 27, in bind_field
+    return unbound_field.bind(form=form, **options)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/fields/core.py", line 376, in bind
+    return self.field_class(*self.args, **kw)
+TypeError: __init__() got an unexpected keyword argument 'validator'
+2021-07-01 15:34:38,499 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
+2021-07-01 15:35:13,244 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
+2021-07-01 15:35:26,348 ERROR: Exception on /reset_passowrd/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6NiwiZXhwIjoxNjI1MTUwNzE5Ljc0ODE5MDl9.v0w7q-ISAUbD2G12prg6zq49NkjMqkNeyi0GMyFmlD4 [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
 Traceback (most recent call last):
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
@@ -98,22 +69,44 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 186, in reset_password_request
-    return render_template("reset_password_request.jinja",
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
-    return _render(
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
-    self.environment.handle_exception()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 1, in top-level template code
-    {% extends "base.jinja" %}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
-    {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 15, in block 'content'
-    {{ form.password.label }}<br>
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordRequestForm object' has no attribute 'password'
+  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 94, in reset_password
+    form = ResetPasswordForm()
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_wtf/form.py", line 87, in __init__
+    super().__init__(formdata=formdata, **kwargs)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/form.py", line 268, in __init__
+    super(Form, self).__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/form.py", line 51, in __init__
+    field = meta.bind_field(self, unbound_field, options)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/meta.py", line 27, in bind_field
+    return unbound_field.bind(form=form, **options)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/fields/core.py", line 376, in bind
+    return self.field_class(*self.args, **kw)
+TypeError: __init__() got an unexpected keyword argument 'validator'
+2021-07-01 15:35:33,499 ERROR: Exception on /reset_passowrd/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6NiwiZXhwIjoxNjI1MTUwNzE5Ljc0ODE5MDl9.v0w7q-ISAUbD2G12prg6zq49NkjMqkNeyi0GMyFmlD4 [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
+Traceback (most recent call last):
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 94, in reset_password
+    form = ResetPasswordForm()
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_wtf/form.py", line 87, in __init__
+    super().__init__(formdata=formdata, **kwargs)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/form.py", line 268, in __init__
+    super(Form, self).__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/form.py", line 51, in __init__
+    field = meta.bind_field(self, unbound_field, options)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/meta.py", line 27, in bind_field
+    return unbound_field.bind(form=form, **options)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/wtforms/fields/core.py", line 376, in bind
+    return self.field_class(*self.args, **kw)
+TypeError: __init__() got an unexpected keyword argument 'validator'
+2021-07-01 15:38:32,953 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]

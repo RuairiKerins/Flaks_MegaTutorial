@@ -1,4 +1,4 @@
-2021-06-28 16:17:37,932 ERROR: Exception on /user/Rarf [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
+2021-06-28 20:51:51,898 ERROR: Exception on /reset_password_request [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
 Traceback (most recent call last):
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
@@ -8,10 +8,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 79, in user
-    return render_template("user.jinja", user=user, posts=posts, form=form)
+  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 170, in reset_password_request
+    return render_template("reset_password_request.jinja",
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
     return _render(
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
@@ -20,15 +18,17 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 1, in top-level template code
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 1, in top-level template code
     {% extends "base.jinja" %}
   File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
     {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 33, in block 'content'
-    {% for post in posts %}
-TypeError: 'Pagination' object is not iterable
-2021-06-28 16:20:51,802 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
-2021-06-28 16:20:55,700 ERROR: Exception on /user/Rarf [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 14, in block 'content'
+    <p>{{ for.submit() }}</p>
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'for' is undefined
+2021-06-28 22:41:10,659 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
+2021-06-28 22:41:15,846 ERROR: Exception on /reset_password_request [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
 Traceback (most recent call last):
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
@@ -38,10 +38,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 79, in user
-    return render_template("user.jinja", user=user, posts=posts, form=form)
+  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 186, in reset_password_request
+    return render_template("reset_password_request.jinja",
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
     return _render(
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
@@ -50,15 +48,17 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 1, in top-level template code
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 1, in top-level template code
     {% extends "base.jinja" %}
   File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
     {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 33, in block 'content'
-    {% for post in posts %}
-TypeError: 'Pagination' object is not iterable
-2021-06-28 16:26:54,491 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
-2021-06-28 16:27:03,662 ERROR: Exception on /user/Rarf [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 15, in block 'content'
+    {{ form.password.label }}<br>
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordRequestForm object' has no attribute 'password'
+2021-07-01 14:05:17,930 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
+2021-07-01 14:05:26,574 ERROR: Exception on /reset_password_request [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
 Traceback (most recent call last):
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
@@ -68,10 +68,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 79, in user
-    return render_template("user.jinja", user=user, posts=posts, form=form)
+  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 186, in reset_password_request
+    return render_template("reset_password_request.jinja",
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
     return _render(
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
@@ -80,15 +78,17 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 1, in top-level template code
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 1, in top-level template code
     {% extends "base.jinja" %}
   File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
     {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 33, in block 'content'
-    {% for post in posts %}
-TypeError: 'Pagination' object is not iterable
-2021-06-28 16:33:02,229 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
-2021-06-28 16:33:06,117 ERROR: Exception on /user/Rarf [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 15, in block 'content'
+    {{ form.password.label }}<br>
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordRequestForm object' has no attribute 'password'
+2021-07-01 14:15:25,789 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
+2021-07-01 14:15:29,982 ERROR: Exception on /reset_password_request [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
 Traceback (most recent call last):
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
@@ -98,10 +98,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 83, in user
-    return render_template("user.jinja", user=user, posts=posts, form=form)
+  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 186, in reset_password_request
+    return render_template("reset_password_request.jinja",
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
     return _render(
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
@@ -110,16 +108,12 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 1, in top-level template code
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 1, in top-level template code
     {% extends "base.jinja" %}
   File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
     {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 33, in block 'content'
-    {% for post in posts %}
-TypeError: 'Pagination' object is not iterable
-2021-06-28 16:35:48,903 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
-2021-06-28 16:52:03,910 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
-2021-06-28 17:34:49,803 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
-2021-06-28 17:38:06,420 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
-2021-06-28 17:45:41,450 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
-2021-06-28 20:51:34,131 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 15, in block 'content'
+    {{ form.password.label }}<br>
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordRequestForm object' has no attribute 'password'
