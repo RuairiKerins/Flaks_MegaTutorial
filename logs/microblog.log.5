@@ -1,15 +1,114 @@
-2021-06-28 20:51:51,898 ERROR: Exception on /reset_password_request [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
+2021-07-22 12:49:17,129 ERROR: Exception on /favicon.ico [GET][in /usr/lib/python3/dist-packages/flask/app.py:1890]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/usr/lib/python3/dist-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/usr/lib/python3/dist-packages/werkzeug/routing.py", line 1799, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1815, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1743, in handle_http_exception
+    return handler(e)
+  File "/home/ruairi/Flask_MegaTutorial/app/errors/handlers.py", line 7, in not_found_error
+    return render_template("errors/404.html"), 404
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/usr/lib/python3/dist-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/errors/404.html", line 1, in <module>
+    {% extends "base.html" %}
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.html", line 1, in <module>
+    {% extends "bootstrap/base.html" %}
+  File "/usr/local/lib/python3.8/dist-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in <module>
+    {% block doc -%}
+  File "/usr/local/lib/python3.8/dist-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in <module>
+    {%- block html %}
+  File "/usr/local/lib/python3.8/dist-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in <module>
+    {% block body -%}
+  File "/usr/local/lib/python3.8/dist-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in <module>
+    {% block navbar %}
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.html", line 17, in <module>
+    <a class="navbar-brand" href="{{ url_for('index') }}">Microblog</a>
+  File "/usr/lib/python3/dist-packages/flask/helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2215, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/helpers.py", line 357, in url_for
+    rv = url_adapter.build(
+  File "/usr/lib/python3/dist-packages/werkzeug/routing.py", line 2020, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'index'. Did you mean 'main.index' instead?
+2021-07-22 12:55:08,379 INFO: Microblog startup[in /home/ruairi/Flask_MegaTutorial/app/__init__.py:75]
+2021-07-22 12:55:29,072 INFO: Microblog startup[in /home/ruairi/Flask_MegaTutorial/app/__init__.py:75]
+2021-07-22 12:55:49,586 INFO: Microblog startup[in /home/ruairi/Flask_MegaTutorial/app/__init__.py:75]
+2021-07-22 12:55:52,317 ERROR: Exception on / [GET][in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
 Traceback (most recent call last):
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
     rv = self.handle_user_exception(e)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1511, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1857, in preprocess_request
+    rv = self.ensure_sync(func)()
+  File "/home/ruairi/Flask_MegaTutorial/app/main/routes.py", line 18, in before_request
+    g.locale = str(get_locale())
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_babel/__init__.py", line 226, in get_locale
+    rv = babel.locale_selector_func()
+  File "/home/ruairi/Flask_MegaTutorial/app/__init__.py", line 82, in get_locale
+    return request.accept_languages.best_match(app.config["LANGUAGES"])
+NameError: name 'app' is not defined
+2021-07-22 12:55:52,877 ERROR: Exception on /favicon.ico [GET][in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
+Traceback (most recent call last):
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 170, in reset_password_request
-    return render_template("reset_password_request.jinja",
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1489, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1471, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/ctx.py", line 367, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/werkzeug/routing.py", line 2032, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1383, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1323, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/home/ruairi/Flask_MegaTutorial/app/errors/handlers.py", line 7, in not_found_error
+    return render_template("errors/404.html"), 404
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
     return _render(
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
@@ -18,102 +117,26 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 1, in top-level template code
-    {% extends "base.jinja" %}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
-    {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 14, in block 'content'
-    <p>{{ for.submit() }}</p>
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'for' is undefined
-2021-06-28 22:41:10,659 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
-2021-06-28 22:41:15,846 ERROR: Exception on /reset_password_request [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
-Traceback (most recent call last):
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 186, in reset_password_request
-    return render_template("reset_password_request.jinja",
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
-    return _render(
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
-    self.environment.handle_exception()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 1, in top-level template code
-    {% extends "base.jinja" %}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
-    {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 15, in block 'content'
-    {{ form.password.label }}<br>
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordRequestForm object' has no attribute 'password'
-2021-07-01 14:05:17,930 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
-2021-07-01 14:05:26,574 ERROR: Exception on /reset_password_request [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
-Traceback (most recent call last):
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 186, in reset_password_request
-    return render_template("reset_password_request.jinja",
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
-    return _render(
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
-    self.environment.handle_exception()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 1, in top-level template code
-    {% extends "base.jinja" %}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
-    {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 15, in block 'content'
-    {{ form.password.label }}<br>
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordRequestForm object' has no attribute 'password'
-2021-07-01 14:15:25,789 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
-2021-07-01 14:15:29,982 ERROR: Exception on /reset_password_request [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
-Traceback (most recent call last):
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 186, in reset_password_request
-    return render_template("reset_password_request.jinja",
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
-    return _render(
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
-    self.environment.handle_exception()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 1, in top-level template code
-    {% extends "base.jinja" %}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
-    {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/reset_password_request.jinja", line 15, in block 'content'
-    {{ form.password.label }}<br>
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'app.forms.ResetPasswordRequestForm object' has no attribute 'password'
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/errors/404.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.html", line 1, in top-level template code
+    {% extends "bootstrap/base.html" %}
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.html", line 48, in block 'content'
+    {% block app_content %}{% endblock%}
+  File "/home/ruairi/Flask_MegaTutorial/app/templates/errors/404.html", line 5, in block 'app_content'
+    <p><a href="{{ url_for('index') }}">Back</a></p>
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/helpers.py", line 325, in url_for
+    rv = url_adapter.build(
+  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/werkzeug/routing.py", line 2305, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'index'. Did you mean 'main.index' instead?
