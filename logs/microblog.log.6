@@ -1,125 +1,118 @@
-2021-06-28 16:17:37,932 ERROR: Exception on /user/Rarf [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
+2021-07-20 15:47:19,480 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-20 15:47:53,065 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-21 13:24:27,755 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-21 13:26:14,027 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-21 13:33:17,771 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-21 14:12:16,492 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-21 14:15:53,723 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:62]
+2021-07-21 16:33:03,801 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:65]
+2021-07-21 16:33:08,061 ERROR: Exception on /favicon.ico [GET] [in /usr/lib/python3/dist-packages/flask/app.py:1890]
 Traceback (most recent call last):
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1949, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 79, in user
-    return render_template("user.jinja", user=user, posts=posts, form=form)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
-    return _render(
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
-    self.environment.handle_exception()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 1, in top-level template code
-    {% extends "base.jinja" %}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
-    {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 33, in block 'content'
-    {% for post in posts %}
-TypeError: 'Pagination' object is not iterable
-2021-06-28 16:20:51,802 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
-2021-06-28 16:20:55,700 ERROR: Exception on /user/Rarf [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/usr/lib/python3/dist-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/usr/lib/python3/dist-packages/werkzeug/routing.py", line 1799, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1951, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 79, in user
-    return render_template("user.jinja", user=user, posts=posts, form=form)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
-    return _render(
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
-    self.environment.handle_exception()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 1, in top-level template code
-    {% extends "base.jinja" %}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
-    {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 33, in block 'content'
-    {% for post in posts %}
-TypeError: 'Pagination' object is not iterable
-2021-06-28 16:26:54,491 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
-2021-06-28 16:27:03,662 ERROR: Exception on /user/Rarf [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1815, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1743, in handle_http_exception
+    return handler(e)
+  File "/home/ruairi/Flask_MegaTutorial/app/errors/handlers.py", line 7, in not_found_error
+    return render_template("errors/404.html"), 404
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/lib/python3/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: errors/404.html
+2021-07-21 16:33:14,537 ERROR: Exception on /favicon.ico [GET] [in /usr/lib/python3/dist-packages/flask/app.py:1890]
 Traceback (most recent call last):
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1949, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 79, in user
-    return render_template("user.jinja", user=user, posts=posts, form=form)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
-    return _render(
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
-    self.environment.handle_exception()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 1, in top-level template code
-    {% extends "base.jinja" %}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
-    {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 33, in block 'content'
-    {% for post in posts %}
-TypeError: 'Pagination' object is not iterable
-2021-06-28 16:33:02,229 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
-2021-06-28 16:33:06,117 ERROR: Exception on /user/Rarf [GET] [in /home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py:1454]
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/usr/lib/python3/dist-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/usr/lib/python3/dist-packages/werkzeug/routing.py", line 1799, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1951, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/ruairi/Flask_MegaTutorial/app/routes.py", line 83, in user
-    return render_template("user.jinja", user=user, posts=posts, form=form)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
-    return _render(
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
-    rv = template.render(context)
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
-    self.environment.handle_exception()
-  File "/home/ruairi/Flask_MegaTutorial/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 1, in top-level template code
-    {% extends "base.jinja" %}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/base.jinja", line 30, in top-level template code
-    {% block content %}{% endblock%}
-  File "/home/ruairi/Flask_MegaTutorial/app/templates/user.jinja", line 33, in block 'content'
-    {% for post in posts %}
-TypeError: 'Pagination' object is not iterable
-2021-06-28 16:35:48,903 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
-2021-06-28 16:52:03,910 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:50]
-2021-06-28 17:34:49,803 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
-2021-06-28 17:38:06,420 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
-2021-06-28 17:45:41,450 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
-2021-06-28 20:51:34,131 INFO: Microblog startup [in /home/ruairi/Flask_MegaTutorial/app/__init__.py:51]
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1815, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1743, in handle_http_exception
+    return handler(e)
+  File "/home/ruairi/Flask_MegaTutorial/app/errors/handlers.py", line 7, in not_found_error
+    return render_template("errors/404.html"), 404
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/lib/python3/dist-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/lib/python3/dist-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: errors/404.html
+2021-07-22 12:17:14,615 INFO: Microblog startup[in /home/ruairi/Flask_MegaTutorial/app/__init__.py:75]
+2021-07-22 12:22:21,143 INFO: Microblog startup[in /home/ruairi/Flask_MegaTutorial/app/__init__.py:75]
+2021-07-22 12:23:37,294 INFO: Microblog startup[in /home/ruairi/Flask_MegaTutorial/app/__init__.py:75]
+2021-07-22 12:23:37,294 INFO: Microblog startup[in /home/ruairi/Flask_MegaTutorial/app/__init__.py:75]
+2021-07-22 12:49:13,868 INFO: Microblog startup[in /home/ruairi/Flask_MegaTutorial/app/__init__.py:75]
+2021-07-22 12:49:16,523 ERROR: Exception on / [GET][in /usr/lib/python3/dist-packages/flask/app.py:1890]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1947, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2241, in preprocess_request
+    rv = func()
+  File "/home/ruairi/Flask_MegaTutorial/app/main/routes.py", line 18, in before_request
+    g.locale = str(get_locale())
+  File "/usr/local/lib/python3.8/dist-packages/flask_babel/__init__.py", line 226, in get_locale
+    rv = babel.locale_selector_func()
+  File "/home/ruairi/Flask_MegaTutorial/app/__init__.py", line 82, in get_locale
+    return request.accept_languages.best_match(app.config["LANGUAGES"])
+NameError: name 'app' is not defined
